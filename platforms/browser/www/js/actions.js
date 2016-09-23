@@ -19,7 +19,7 @@ else {
 
 /* LA BURGER */
     var bittee = 1;	
-    $( ".btn_mordida" ).click(function() {
+    $( ".btn_mordida, .nav_li_btn " ).click(function() {
         console.log('bite bite')
         if (bittee == 1) { 
             $(".burger").addClass("bite");
@@ -39,8 +39,41 @@ else {
     });
 
 
+/* EL SCROLL CROLL*/
+$(function() {
+    $('a[href*="#"]:not([href="#"])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+            $('html, body').animate({
+              //scrollTop: target.offset().top
+               scrollTop: target.offset().top - 0
+            }, 1000);
+            return false;
+            }
+        }
+    });
+});
 
-});//FIN
+});
+
+document.addEventListener("deviceready", 
+    function(){
+
+        var button = document.getElementById("cameraBtn");
+        button.addEventListener("click", function() {
+            navigator.camera.getPicture(onSuccess, onFail);
+        });
+
+});
+function onSuccess(imageFile){
+    var imgTag = document.getElementById("picture");
+    imgTag.src = imageFile;
+}
+function onFail(message){
+    alert(message);
+}//FIN
 
 //	$("nav").toggle("slow", function(){
 //	});

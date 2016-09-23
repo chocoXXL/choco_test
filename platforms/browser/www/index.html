@@ -72,27 +72,32 @@
             <div id="box_main" class="box_main">
                 <div id="box_1" class="box_info">
                     <header class="area">
-                    header
+                        <h2>
+                        header
+                        </h2>
                     </header>
                 </div>
                 <div id="box_2" class="box_info">
                     <section class="area">
-                    info1
+                        <h2>
+                        info1
+                        </h2>
                     </section>
                 </div>
                 <div id="box_3" class="box_info">
                     <section class="area">
-                    info2
+                        <h2>
+                        info2
+                        </h2>
+                    <button id="cameraBtn">Camera</button>
+                    <img id="picture" >
                     </section>
                 </div>
                 <div id="box_4" class="box_info">
-                    <section class="area">
-                    info3
-                    </section>
-                </div>
-                <div id="box_5" class="box_info">
                     <footer class="area">
-                    footer
+                        <h2>
+                        footer
+                        </h2>
                     </footer>
                 </div>
             </div>
@@ -113,10 +118,10 @@
             <nav class="">            
                 <div class="nav_info nav_ok">
                     <ul>
-                        <li>Inicio</li>
-                        <li>Datos</li>
-                        <li>Ver Más</li>
-                        <li>Buscame</li>
+                        <li><a class="nav_li_btn" href="#box_1">Inicio</a></li>
+                        <li><a class="nav_li_btn" href="#box_2">Datos</a></li>
+                        <li><a class="nav_li_btn" href="#box_3">Ver Más</a></li>
+                        <li><a class="nav_li_btn" href="#box_4">Buscame</a></li>
                     </ul>
                 </div>
                 <div class="nav_info nav_adj">
@@ -124,8 +129,10 @@
             </nav>
         </div>
 
+    <script type="text/javascript" src="cordova.js"></script>
     <script src="js/jquery-3.1.0.js" type="text/javascript"></script>
     <!--<script src="js/jquery-1.12.1.js" type="text/javascript"></script>-->
     <script src="js/actions.js" type="text/javascript"></script>
+
     </body>
 </html>
