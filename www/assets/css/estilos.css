@@ -1,0 +1,126 @@
+html, body {
+    height: 100%;
+}
+body {
+    margin:0;
+    padding:0;
+    background-color:#ccc;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+
+    overflow: hidden;
+}
+#map {
+    height: calc(100% - 83px);
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+#titulo{
+    display: flex;
+    align-items: center;
+}
+.box{
+    width: 50%;
+    /*font-size: 11px;*/
+}
+.box button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #1791bd;
+    font-size: 1em;
+    letter-spacing: 2px;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 3px;
+}
+
+/* BOTOM BURGER */ 
+.nav_items{
+    /*display: none;*/
+    position: absolute;
+    z-index: 10;
+    width: 50%;
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+    right: 100%;
+    transition: .7s all cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    cursor: pointer;
+}
+.burger_box {
+    /*display: none;*/
+    vertical-align: middle;
+    text-align: right;
+}
+.burger {
+    width: 46px;
+    height: 46px;
+    /*background-color: gold;*/
+    /*text-align: center;*/
+    /*display: none;*/
+        display: inline-block;
+    transition: 0.4s all ease-in-out;
+}
+.burger button {
+    height: 46px;
+    width: 46px;
+    padding: 0px 8px;
+    margin: auto;
+    display: block;
+    font-weight: bold;
+    border: 2px solid dodgerblue;
+    background: dodgerblue;
+    text-decoration: none;
+    transition: .7s all cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    outline: none;
+    cursor: pointer;
+}
+.burger button:hover {
+    border: 2px solid white;
+}
+.burger span {
+    display: block;
+    position: relative;
+    top: 50%;
+    height: 3px;
+    background: #fff;
+    font-size: 0px;
+    transition: .8s all cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    transition-delay: 0s,.3s;
+}
+.burger span:before {
+    position: absolute;
+    display: block;
+    height: 3px;
+    width: 26px;
+    background-color: #fff;
+    content: "";
+    top: -10px;
+    left: 0;
+    transition: .8s all cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    transition-delay: 0s,.3s;
+}
+.burger span:after {
+    position: absolute;
+    display: block;
+    width: 26px;
+    height: 3px;
+    background-color: #fff;
+    content: "";
+    top: 10px;
+    left: 0;
+    transition: .8s all cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    transition-delay: .1s,.3s;
+}
+
+.burger.bite span:before {
+    transform: rotate(-135deg);
+    top: 0;
+}
+.burger.bite span {
+    background: transparent;
+}
+.burger.bite span:after {
+    transform: rotate(-45deg);
+    top: 0;
+}
